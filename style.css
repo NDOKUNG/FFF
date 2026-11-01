@@ -1,0 +1,74 @@
+/* ========== 1) ตัวแปรสี (เปลี่ยนธีมทั้งเว็บได้ที่นี่ที่เดียว) ========== */
+:root {
+  --ink: #0f3d4c;        /* สีหลัก: น้ำเงินเขียวเข้ม */
+  --ink-dark: #0a2b36;
+  --accent: #ffb703;     /* สีเน้น: เหลืองอำพัน ใช้กับปุ่มสำคัญ */
+  --paper: #ffffff;
+  --mist: #eef4f5;       /* พื้นหลังสลับสี */
+  --text: #1c2b30;
+}
+
+/* ========== 2) พื้นฐาน ========== */
+html { scroll-behavior: smooth; scroll-padding-top: 72px; } /* เลื่อนนุ่ม + กัน navbar บังหัวข้อ */
+body { font-family: "Sarabun", sans-serif; color: var(--text); }
+h1, h2, h3, .navbar-brand { font-family: "Prompt", sans-serif; }
+
+.section { padding: 5rem 0; }
+.section-alt { background: var(--mist); }
+.section-title { font-weight: 700; color: var(--ink); }
+.section-sub { max-width: 40rem; margin-bottom: 3rem; color: #4d6269; }
+
+/* ========== 3) Navbar ========== */
+.app-nav { background: var(--ink-dark); }
+.app-nav .navbar-brand { color: #fff; font-weight: 700; }
+.app-nav .nav-link { color: rgba(255,255,255,.8); }
+.app-nav .nav-link:hover,
+.app-nav .nav-link.active { color: var(--accent); }
+.app-nav .navbar-toggler { border-color: rgba(255,255,255,.5); }
+.app-nav .navbar-toggler-icon { filter: invert(1); } /* ทำไอคอน hamburger เป็นสีขาว */
+
+/* ========== 4) Header / Hero ========== */
+.hero { background: var(--ink); color: #fff; padding: 5rem 0; }
+.hero-title { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.2; }
+.hero-lead { font-size: 1.15rem; margin: 1.25rem 0 2rem; color: rgba(255,255,255,.85); max-width: 34rem; }
+.hero-img { border-radius: 1rem; }
+
+/* ปุ่มสีเน้น (สร้างเองเพราะ Bootstrap ไม่มีสีนี้) */
+.btn-accent { background: var(--accent); color: var(--ink-dark); font-weight: 600; border: 0; }
+.btn-accent:hover { background: #ffc93c; color: var(--ink-dark); }
+
+/* ========== 5) Features ========== */
+.feature-card { background: var(--paper); border: 1px solid #d5e2e5; border-radius: 1rem; padding: 2rem; }
+.feature-icon { font-size: 2.5rem; color: var(--ink); }
+.feature-card h3 { font-size: 1.25rem; margin: 1rem 0 .5rem; color: var(--ink); }
+
+/* ========== 6) Price List ========== */
+.price-card { background: var(--paper); border: 1px solid #d5e2e5; border-radius: 1rem; padding: 2rem; }
+.price-card h3 { color: var(--ink); }
+.price { font-family: "Prompt", sans-serif; font-size: 2.2rem; font-weight: 700; margin: .5rem 0; }
+.price small { font-size: 1rem; font-weight: 400; color: #6b7f85; }
+.price-card li { padding: .3rem 0; }
+.price-card li .bi { color: var(--ink); margin-right: .4rem; }
+.price-card.featured { background: var(--ink); color: #fff; border-color: var(--ink); }
+.price-card.featured h3, .price-card.featured li .bi { color: var(--accent); }
+.price-card.featured .price small { color: rgba(255,255,255,.7); }
+
+/* ========== 7) Social Link ========== */
+.social-section { background: var(--ink-dark); color: #fff; padding: 4rem 0 2rem; }
+.social-section .section-title { color: #fff; }
+.social-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; color: var(--ink-dark); font-size: 1.3rem; text-decoration: none;
+}
+.social-btn:hover { background: var(--accent); }
+
+/* ========== 8) หน้า About / Team ========== */
+.about-intro { padding-bottom: 1rem; }
+.member-card { background: var(--paper); border-radius: 1rem; padding: 2rem 1.5rem; border: 1px solid #d5e2e5; }
+.member-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; }
+.member-card h3 { font-size: 1.15rem; color: var(--ink); }
+.member-role { color: #5b7078; }
+
+/* ให้เห็นกรอบโฟกัสชัดเจนเวลากด Tab ด้วยคีย์บอร์ด */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
